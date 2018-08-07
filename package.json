@@ -1,11 +1,21 @@
 {
-  "name": "gsynergy-shop-admin",
+  "name": "gsynergy-research",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.5.2",
+    "apollo-boost": "^0.1.12",
+    "bootstrap": "^4.1.3",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "lodash": "^4.17.10",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
+    "react-apollo": "^2.1.9",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "reactstrap": "^6.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
