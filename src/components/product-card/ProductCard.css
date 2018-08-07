@@ -1,0 +1,23 @@
+.product-card
+{
+  min-width: 200px !important;
+  max-width: 200px !important;
+  font-size: 0.75rem;
+}
+
+.product-card-body
+{
+  width: 100%;
+  height: 200px;
+  background-color: #cccccc;
+}
+
+.product-card-price
+{
+  color: red;
+}
+
+.product-card-vendor
+{
+  font-size: 80%!important;
+}
