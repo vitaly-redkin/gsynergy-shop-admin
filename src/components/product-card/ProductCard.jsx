@@ -11,7 +11,9 @@ class ProductCard extends PureComponent {
   render() {
     const product = this.props.product;
     return (
-      <Card draggable className='product-card p-0 m-2 mt-1 shadow-sm rounded draggable' 
+      <Card id={`productCard_${product.id}`}
+            draggable 
+            className='product-card p-0 m-2 mt-1 shadow-sm rounded draggable' 
             onDragStart={this.onDragStart} 
             onDragEnd={this.onDragEnd}
       >

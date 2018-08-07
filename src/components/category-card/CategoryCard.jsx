@@ -20,7 +20,8 @@ class CategoryCard extends PureComponent {
   render() {
     const category = this.props.category;
     return (
-      <Card className='category-card mb-2 ml-0 shadow-sm rounded droppable '
+      <Card id={`categoryCard_${category.id}`}
+            className='category-card mb-2 ml-0 shadow-sm rounded droppable'
             onDragOver={this.onDragOver}
             onDrop={this.onDrop}>
         <CardBody className='ml-1 pb-2 pt-2'>

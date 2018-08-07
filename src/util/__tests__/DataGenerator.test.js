@@ -3,12 +3,11 @@
  */
 
 import * as DataGenerator from '../DataGenerator';
-import { Category, Product } from '../Types';
 
 describe('Products and categories generated correctly', () => {
-  const productCount = 100;
-  const categoryCount = 10;
-  const maxProductPerCategory = 5;
+  const productCount = 10;
+  const categoryCount = 5;
+  const maxProductPerCategory = 2;
   const { products, categories } = DataGenerator.generateProductsAndCategories(
     productCount, categoryCount, maxProductPerCategory);
   
