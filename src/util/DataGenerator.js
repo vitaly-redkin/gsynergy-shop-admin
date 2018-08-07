@@ -59,7 +59,7 @@ export function generateProductsAndCategories(
 
 const PRODUCT_COUNT = 100;
 const CATEGORY_COUNT = 10;
-const MAX_CATEGORY_PER_PRODUCT_COUNT = 10;
+const MAX_CATEGORY_PER_PRODUCT_COUNT = 3;
 const MAX_PRICE = 10000;
 const FULL_DESCRIPTION = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus vitae turpis sed ullamcorper. Phasellus ac mi eu enim pellentesque interdum. Proin eleifend lobortis ultrices. Cras sed mauris ut erat volutpat rhoncus. Donec tincidunt dui nibh, eget faucibus ante molestie at. Donec in gravida dui. Etiam vitae dapibus augue. Etiam nec varius velit, et venenatis lacus. Donec sed viverra orci. Curabitur facilisis nisl ipsum, id pretium augue luctus eu. Cras ut consectetur sapien, id posuere dui. In in augue eget magna pellentesque lacinia in eu leo. Cras placerat dapibus sapien, eu pulvinar enim ornare vel. Nunc lobortis laoreet metus ultricies rutrum. Suspendisse vitae iaculis massa. Maecenas placerat finibus sollicitudin.';
 

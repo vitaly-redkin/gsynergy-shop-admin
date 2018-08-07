@@ -1,0 +1,5 @@
+.category-pane-container
+{
+  overflow: auto;
+  height: calc(100vh - 70px);
+}

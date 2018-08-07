@@ -1,0 +1,7 @@
+.app-container,
+.app-column-left,
+.app-column-right,
+.app-search-bar
+{
+  border: solid 1px #cccccc; 
+}

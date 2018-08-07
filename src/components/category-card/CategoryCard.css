@@ -1,0 +1,17 @@
+.category-card
+{
+  font-size: 0.75rem;
+}
+
+.category-card-image
+{
+  width: 40px;
+  height: 40px;
+  background-color: #cccccc;
+}
+
+.category-product-count
+{
+  min-width: 30px;
+  font-size: 100%!important;
+}
