@@ -8,7 +8,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Mutation } from "react-apollo";
 import { Card, CardBody, Row, Col, Badge } from 'reactstrap';
-import * as Numeral from 'numeral';
 import * as Queries from '../../graphql/queries';
 import * as GlobalData from '../../util/GlobalData';
 import * as Types from '../../util/Types';
@@ -34,7 +33,7 @@ class CategoryCard extends PureComponent {
             </Col>
             <Col className='col-2 pl-0 pr-0 text-right'>
               <Badge className='badge-danger category-product-count p-1'>
-                {Numeral(category.productCount).format('0,0')}
+              {new Intl.NumberFormat('en-US').format(category.productCount)}
               </Badge>
             </Col>
           </Row>

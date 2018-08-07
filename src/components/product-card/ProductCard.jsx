@@ -4,7 +4,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardBody, CardFooter, Row, Col } from 'reactstrap';
-import * as Numeral from 'numeral';
 import * as GlobalData from '../../util/GlobalData';
 import './ProductCard.css';
 
@@ -28,12 +27,17 @@ class ProductCard extends PureComponent {
               {product.name}
             </Col>
             <Col className='product-card-price text-right'>
-              {Numeral(product.price).format('$0,0.00')}
+              {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(product.price)}
             </Col>
           </Row>    
           <Row>
             <Col className='product-card-vendor'>
               {product.vendorName + ', ' + product.vendorLocation}
+            </Col>
+          </Row>    
+          <Row>
+            <Col className='product-card-description'>
+              {product.description}
             </Col>
           </Row>    
         </CardFooter>

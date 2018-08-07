@@ -21,3 +21,14 @@
 {
   font-size: 80%!important;
 }
+
+.product-card-description
+{
+  font-size: 70%!important;
+  color: #888888;
+  max-height: 35px;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

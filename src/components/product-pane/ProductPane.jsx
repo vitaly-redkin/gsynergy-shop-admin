@@ -23,7 +23,7 @@ class ProductPane extends PureComponent {
         <div>{`Error: ${error}`}</div>
       );
     }
-    else if (loading) {
+    else if (loading || !products) {
       return (
         <div>Loading...</div>
       );

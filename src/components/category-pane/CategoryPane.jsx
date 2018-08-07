@@ -23,7 +23,7 @@ class CategoryPane extends PureComponent {
         <div>{`Error: ${error}`}</div>
       );
     }
-    else if (loading) {
+    else if (loading || !categories) {
       return (
         <div>Loading...</div>
       );
