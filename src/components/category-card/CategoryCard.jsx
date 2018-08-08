@@ -92,9 +92,10 @@ class CategoryCard extends PureComponent {
   /**
    * Event handler for the Drop event.
    * 
-   * @param ev DragOver event object
+   * @param ev Drop event object
    */
-  onDrop = () => {
+  onDrop = (ev) => {
+    ev.preventDefault();
     const product = GlobalData.globalData.draggedProduct;
 //    console.log(`Dropped: ${product.id} on ${this.props.category.name}`);
     if (this.canAssignProductToCategory(product)) {

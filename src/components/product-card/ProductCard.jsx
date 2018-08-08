@@ -56,13 +56,17 @@ class ProductCard extends PureComponent {
     const product = this.props.product;
 //    console.log(`Drag started: ${product.name}`);
     GlobalData.globalData.draggedProduct = product;
+    ev.dataTransfer.setData('text/html', product.id + '');  
     ev.dataTransfer.effectAllowed = 'move';
   }
 
   /**
    * DragEnd event handler.
+   * 
+   * @param ev DragEnd event
    */
-  onDragEnd = () => {
+  onDragEnd = (ev) => {
+    ev.preventDefault();
     GlobalData.globalData.draggedProduct = null;
   }
 }
