@@ -10,7 +10,8 @@ class App extends PureComponent {
       <Container className='mw-100 pl-4 pr-4 pt-2 pb-2'>
         <Row>
           <Col className='app-search-bar pt-2 pb-2 text-center'>
-            Search Bar Placeholder
+            Assign a product to a category by drag and drop. 
+            The product tooltip shows which categories the product is already assigned to.
           </Col>
         </Row>
         <Row className='app-container'>

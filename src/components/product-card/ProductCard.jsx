@@ -19,7 +19,7 @@ class ProductCard extends PureComponent {
       >
         <CardBody className='m-0 p-0'>
           <div className='rounded-top product-card-body' 
-               title={`Product belongs to such groups: ${JSON.stringify(product.categoryIds)}`} 
+               title={`Product assigned to such categories: ${JSON.stringify(product.categoryIds)}`} 
           >
           </div>
         </CardBody>

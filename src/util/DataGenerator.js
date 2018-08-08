@@ -32,8 +32,7 @@ export function generateProductsAndCategories(
     for (let j = 0; j <= productCategoryCount; j++) {
       const categoryId = Math.ceil(Math.random() * categoryCount);
       if (categoryIds.indexOf(categoryId) >= 0) {
-        // If category ID repeats, try again
-        j--;
+        // If category ID repeats, skip it
         continue;
       }
 
