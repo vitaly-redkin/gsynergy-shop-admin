@@ -45,7 +45,7 @@ describe("Test if component can correctly be assigned to category", async () => 
   // Assign "dragged" product to the global variable
   GlobalData.globalData.draggedProduct = product;
 
-  // Emulate sropping product to the category
+  // Emulate dropping product to the category
   await categoryCard.get(0).props.onDrop();
 
   const wrapperAfterAdd = createWrapper();
