@@ -74,7 +74,6 @@ class CategoryCard extends PureComponent {
     const product = GlobalData.globalData.draggedProduct;
     const canBeDropped = this.canAssignProductToCategory(product);
     const result = (canBeDropped ? 'move' : 'none');
-//    console.log(result + ' ' + (product != null ? product.id : '?') + ' ' + this.props.category.id);
     return result;
   }
 
@@ -92,12 +91,17 @@ class CategoryCard extends PureComponent {
   /**
    * Event handler for the Drop event.
    * 
-   * @param ev Drop event object
+   * @param ev Drop event object - when we run the real application. 
+   * In tests this even will be {product} object where product is of Product type.
    */
   onDrop = (ev) => {
-    ev.preventDefault();
-    const product = GlobalData.globalData.draggedProduct;
-//    console.log(`Dropped: ${product.id} on ${this.props.category.name}`);
+    // This function can be called from tests - in this case no preventDefault() function supplied
+    if (ev && ev.preventDefault) {
+      ev.preventDefault();
+    }
+    // This function can be called from tests - product will be enapsulated in ev to prevent gloval varialble syc mess
+    const product = (ev && ev.product ? ev.product : GlobalData.globalData.draggedProduct);
+
     if (this.canAssignProductToCategory(product)) {
       this.assignProductToCategory(product);
     }

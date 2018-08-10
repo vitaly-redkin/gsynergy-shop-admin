@@ -4,11 +4,12 @@
  */
 import React, { PureComponent } from 'react';
 import { ApolloProvider } from 'react-apollo';
-import { client } from '../../graphql/client';
+import { createClient } from '../../graphql/client';
 import App from '../app/App';
 
 class Main extends PureComponent {
   render() {
+    const client = createClient();
     return (
       <ApolloProvider client={client}>
         <App />

@@ -8,9 +8,14 @@ import defaults from './defaults';
 import resolvers from './resolvers';
 import typeDefs from './typeDefs';
 
-const cache = new InMemoryCache();
-export const client = new ApolloClient({
-  cache,
-  link: withClientState({ resolvers, defaults, cache, typeDefs }),
-});
-
+/**
+ * Creates Apollo client to use in the Apollo Provider.
+ */
+export function createClient() {
+  const cache = new InMemoryCache();
+  const client = new ApolloClient({
+    cache,
+    link: withClientState({ resolvers, defaults, cache, typeDefs }),
+  });
+  return client;
+}
